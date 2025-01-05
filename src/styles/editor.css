@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlighted-text {
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.ProseMirror {
+  min-height: 200px;
+  max-width: 90%;
+  width: 90%;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.editor-toolbar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+}
+
+.editor-toolbar button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.editor-toolbar button:hover {
+  background-color: #e5e7eb;
+}
+
+.editor-toolbar button.active {
+  box-shadow: 0 0 4px 2px rgba(59, 130, 246, 0.5);
+}
+
+.editor-toolbar button[data-highlight="yellow"] {
+  background-color: yellow;
+}
+
+.editor-toolbar button[data-highlight="red"] {
+  background-color: red;
+}
+
+.editor-toolbar button[data-highlight="blue"] {
+  background-color: blue;
+}
+
+.editor-toolbar button[data-highlight="green"] {
+  background-color: green;
+}
+
+.editor-toolbar button[data-highlight="purple"] {
+  background-color: purple;
+}
+
+.editor-toolbar button[data-highlight="orange"] {
+  background-color: orange;
+}
+
+.editor-toolbar button[data-highlight="pink"] {
+  background-color: pink;
+}
+
+.editor-toolbar button[data-highlight="cyan"] {
+  background-color: cyan;
+}
+
+.ProseMirror p.is-empty::before {
+  content: 'Start typing or paste content...';
+  color: #9ca3af;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.editor-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.editor-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-buttons button:hover {
+  background-color: #e5e7eb;
+}
+
+.editor-buttons button:active {
+  box-shadow: 0 0 4px 2px rgba(59, 130, 246, 0.5);
+}
+
+.editor-buttons button.bg-blue-500 {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.editor-buttons button.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.editor-buttons button.bg-blue-500:hover {
+  background-color: #2563eb;
+}
+
+.editor-buttons button.bg-gray-100:hover {
+  background-color: #e5e7eb;
+}
+
+.editor-buttons button.clear-all {
+  background-color: #f87171;
+  color: white;
+}
+
+.editor-buttons button.clear-all:hover {
+  background-color: #ef4444;
+}
+
+.editor-buttons button.select-all {
+  background-color: #10b981;
+  color: white;
+}
+
+.editor-buttons button.select-all:hover {
+  background-color: #059669;
+}
