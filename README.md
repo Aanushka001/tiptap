@@ -22,7 +22,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-## Keyboard Shortcuts
-- `Ctrl/Cmd + H`: Apply highlight with default color
-- `Ctrl/Cmd + Shift + H`: Remove highlight
